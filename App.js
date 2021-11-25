@@ -38,7 +38,7 @@ export default function App() {
           <Input onChangeText={onChangeTitle} value={title} />
           <Button onPress={isShowTitle} title="OK" />
 
-          <Messages urlApi="https://allugofrases.herokuapp.com/frases/random" />
+          <Messages urlApi="https://positive-vibes-api.herokuapp.com/quotes/random" />
 
           <StatusBar style="auto" />
         </View>

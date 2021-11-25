@@ -2,13 +2,10 @@ import React from 'react';
 import { ActivityIndicator, View, Text } from "react-native";
 import { useQuery } from 'react-query';
 import { CustomMessages } from './styles';
+import { loadItems } from "../../api";
 
 export const Messages = ({ urlApi }) => {
-    const { isLoading, error, data } = useQuery('messageOfTheDay', () =>
-        fetch(urlApi).then(res =>
-            res.json()
-        ));
-
+    const { isLoading, error, data } = useQuery('showMessages', loadItems(`${urlApi}`));
     if (isLoading) {
         return <ActivityIndicator size="large" color="pink" />;
     }
@@ -23,7 +20,7 @@ export const Messages = ({ urlApi }) => {
 
     return (
         <View>
-            <CustomMessages>{data.frase}</CustomMessages>
+            <CustomMessages>{data.data}</CustomMessages>
         </View>
     )
 }
