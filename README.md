@@ -3,7 +3,7 @@
 ## Descrição do Projeto
 <p>Projeto destinado às atividades da disciplina de Mobile do cursos de Sistemas para Internet da Unicap utilizando React Native.</p>
 
-<h1>Currículo<h1>
+<p>Currículo</p>
 
 Crie um App com o seu currículo:
 - Utilize React Navigation para que o seu App tenha várias páginas
